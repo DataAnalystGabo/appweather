@@ -1,0 +1,156 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AppWeather</title>
+
+    <!--Css Styles-->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!--JavaScript-->
+    <script src="./app/index.js" type="module"></script>
+  </head>
+  <body class="body">
+    <main class="main">
+      <div class="landscape">
+        <figure class="landscape__figure landscape__figure--day">
+          <img
+            class="landscape__img"
+            src="./images/background-day.png"
+            alt="Ilustración de paisaje al amanecer"
+          />
+        </figure>
+
+        <figure class="landscape__figure landscape__figure--night">
+          <img
+            class="landscape__img"
+            src="./images/background-night.jpg"
+            alt="Ilustración de paisaje al anochecer"
+          />
+        </figure>
+      </div>
+
+      <div class="weather">
+        <span class="weather__city">Buenos Aires / AR</span>
+        <span class="weather__temp">32 °C</span>
+
+        <ul class="weather__ul">
+          <li class="weather__li">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              fill="currentColor"
+              class="bi bi-thermometer-sun"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M5 12.5a1.5 1.5 0 1 1-2-1.415V2.5a.5.5 0 0 1 1 0v8.585A1.5 1.5 0 0 1 5 12.5z"
+              />
+              <path
+                d="M1 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0V2.5zM3.5 1A1.5 1.5 0 0 0 2 2.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0L5 10.486V2.5A1.5 1.5 0 0 0 3.5 1zm5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5zm4.243 1.757a.5.5 0 0 1 0 .707l-.707.708a.5.5 0 1 1-.708-.708l.708-.707a.5.5 0 0 1 .707 0zM8 5.5a.5.5 0 0 1 .5-.5 3 3 0 1 1 0 6 .5.5 0 0 1 0-1 2 2 0 0 0 0-4 .5.5 0 0 1-.5-.5zM12.5 8a.5.5 0 0 1 .5-.5h1a.5.5 0 1 1 0 1h-1a.5.5 0 0 1-.5-.5zm-1.172 2.828a.5.5 0 0 1 .708 0l.707.708a.5.5 0 0 1-.707.707l-.708-.707a.5.5 0 0 1 0-.708zM8.5 12a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5z"
+              />
+            </svg>
+            <span class="weather__value weather__value--tempfeelslike"
+              >Senc térmica : 34 °C</span
+            >
+          </li>
+
+          <li class="weather__li">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              fill="currentColor"
+              class="bi bi-wind"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M12.5 2A2.5 2.5 0 0 0 10 4.5a.5.5 0 0 1-1 0A3.5 3.5 0 1 1 12.5 8H.5a.5.5 0 0 1 0-1h12a2.5 2.5 0 0 0 0-5zm-7 1a1 1 0 0 0-1 1 .5.5 0 0 1-1 0 2 2 0 1 1 2 2h-5a.5.5 0 0 1 0-1h5a1 1 0 0 0 0-2zM0 9.5A.5.5 0 0 1 .5 9h10.042a3 3 0 1 1-3 3 .5.5 0 0 1 1 0 2 2 0 1 0 2-2H.5a.5.5 0 0 1-.5-.5z"
+              />
+            </svg>
+            <span class="weather__value weather__value--wind">
+              Viento : 30km / h
+            </span>
+          </li>
+
+          <li class="weather__li">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              fill="currentColor"
+              class="bi bi-cloud-fog"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M3 13.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm10.405-9.473a5.001 5.001 0 0 0-9.499-1.004A3.5 3.5 0 1 0 3.5 12H13a3 3 0 0 0 .405-5.973zM8.5 3a4 4 0 0 1 3.976 3.555.5.5 0 0 0 .5.445H13a2 2 0 0 1 0 4H3.5a2.5 2.5 0 1 1 .605-4.926.5.5 0 0 0 .596-.329A4.002 4.002 0 0 1 8.5 3z"
+              />
+            </svg>
+            <span class="weather__value weather__value--humidity">
+              Humedad : 10%
+            </span>
+          </li>
+        </ul>
+
+        <form class="weather__search" id="form">
+          <input
+            class="weather__input"
+            type="text"
+            name="search"
+            placeholder="Buscar por ciudad"
+            autocorrect="off"
+            autocomplete="off"
+          />
+
+          <button class="weather__submit">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="weather__icon weather__icon--lup bi bi-search"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+              />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </main>
+    
+    <section class="readme">
+      <div class="readme__box">
+        <h2 class="readme__title">Read Me</h2>
+        <p class="readme__p">
+          Este proyecto surge con el objetivo de poner en práctica lo aprendido en
+          el curso de asincronismo en JavaScript de Platzi.
+        </p>
+        
+        <p class="readme__p">
+          El asincronismo en JavaScript es la capacidad del propio lenguaje de no
+          interrumpir el hilo de ejecución de tareas a pesar de que, algunas
+          tareas pueden demorar más que otra en cumplir con sus objetivos.
+        </p>
+        
+        <p class="readme__p">
+          Para este proyecto decidí consumir la api del clima de
+          OpenWeatherMap.org. Al buscar una ciudad te mostrará la temperatura
+          actual, la sensación térmica, el viento y la humedad. Además, sabrás si
+          en esa ciudad es de noche o de día de acuerdo al background que se
+          mostrará según la zona horaria vigente en dicha ciudad.
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
