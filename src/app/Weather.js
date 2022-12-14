@@ -9,21 +9,40 @@ export function getWeather(city) {
     })
         .then(response => response.json())
         .then(response => {
-            const icon = response.weather[0].icon;
-            const timeZone = icon.charAt(icon.length - 1);
 
-            const ui = new Ui;
+            if (response.cod == 404) {
 
-            ui.render(response);
+                document.querySelector('.alert').classList.add('alert--active');
 
-            if (timeZone === 'd') {
+                setTimeout((
+                ) => {
 
-                document.querySelector('.landscape__figure--night').classList.remove('landscape__figure--night--active');
+                    document.querySelector('.alert').classList.remove('alert--active');
+                    
+                }, 2000);
 
-            } else if (timeZone === 'n') {
 
-                document.querySelector('.landscape__figure--night').classList.add('landscape__figure--night--active');
 
+            } else {
+
+                const icon = response.weather[0].icon;
+                const timeZone = icon.charAt(icon.length - 1);
+
+                const ui = new Ui;
+
+                ui.render(response);
+
+                if (timeZone === 'd') {
+
+                    document.querySelector('.landscape__figure--night').classList.remove('landscape__figure--night--active');
+
+                } else if (timeZone === 'n') {
+
+                    document.querySelector('.landscape__figure--night').classList.add('landscape__figure--night--active');
+
+                }
             }
+
+
         })
-}
+};

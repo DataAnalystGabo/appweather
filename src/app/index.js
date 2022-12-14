@@ -5,4 +5,4 @@ document.querySelector('.weather__search').addEventListener('submit', (e)=>{
     const data = new FormData(form);
     const city = data.get('search');
     getWeather(city);
-})
+});

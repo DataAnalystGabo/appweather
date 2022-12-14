@@ -14,4 +14,4 @@ export class Ui{
         this.wind.textContent               = 'Viento : '  + response.wind.speed + ' Km/h';
         this.humidity.textContent           = 'Humedad : ' + response.main.humidity + ' %';
      }
-}
+};

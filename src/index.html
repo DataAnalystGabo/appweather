@@ -1,20 +1,21 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>AppWeather</title>
 
     <!--Css Styles-->
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/normalize.css" >
+    <link rel="stylesheet" href="css/index.css" >
     <!--Google Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
-    />
+    >
     <!--JavaScript-->
     <script src="./app/index.js" type="module"></script>
   </head>
@@ -24,23 +25,23 @@
         <figure class="landscape__figure landscape__figure--day">
           <img
             class="landscape__img"
-            src="./images/background-day.png"
+            src="./img/background-day.webp"
             alt="Ilustración de paisaje al amanecer"
-          />
+          >
         </figure>
 
         <figure class="landscape__figure landscape__figure--night">
           <img
             class="landscape__img"
-            src="./images/background-night.jpg"
+            src="./img/background-night.webp"
             alt="Ilustración de paisaje al anochecer"
-          />
+          >
         </figure>
       </div>
 
       <div class="weather">
-        <span class="weather__city">Buenos Aires / AR</span>
-        <span class="weather__temp">32 °C</span>
+        <span class="weather__city">Ciudad / Cod. País</span>
+        <span class="weather__temp">- - -</span>
 
         <ul class="weather__ul">
           <li class="weather__li">
@@ -60,7 +61,7 @@
               />
             </svg>
             <span class="weather__value weather__value--tempfeelslike"
-              >Senc térmica : 34 °C</span
+              >Senc térmica :  - - -</span
             >
           </li>
 
@@ -78,7 +79,7 @@
               />
             </svg>
             <span class="weather__value weather__value--wind">
-              Viento : 30km / h
+              Viento :  - - -
             </span>
           </li>
 
@@ -96,7 +97,7 @@
               />
             </svg>
             <span class="weather__value weather__value--humidity">
-              Humedad : 10%
+              Humedad :  - - -
             </span>
           </li>
         </ul>
@@ -107,9 +108,8 @@
             type="text"
             name="search"
             placeholder="Buscar por ciudad"
-            autocorrect="off"
             autocomplete="off"
-          />
+          >
 
           <button class="weather__submit">
             <svg
@@ -126,31 +126,112 @@
             </svg>
           </button>
         </form>
+        <div class="weather__alert alert">
+          <span class="alert__span">La ciudad ingresada no es correcta</span>
+        </div>
       </div>
     </main>
-    
+
     <section class="readme">
       <div class="readme__box">
-        <h2 class="readme__title">Read Me</h2>
+        <div class="readme__title">
+          <h2 class="readme__h2">Read Me</h2>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            fill="currentColor"
+            class="bi bi-paperclip"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z"
+            />
+          </svg>
+        </div>
         <p class="readme__p">
-          Este proyecto surge con el objetivo de poner en práctica lo aprendido en
-          el curso de asincronismo en JavaScript de Platzi.
+          Este proyecto surge con el objetivo de poner en práctica lo aprendido
+          en el curso de asincronismo en JavaScript de Platzi.
         </p>
-        
+
         <p class="readme__p">
-          El asincronismo en JavaScript es la capacidad del propio lenguaje de no
-          interrumpir el hilo de ejecución de tareas a pesar de que, algunas
+          El asincronismo en JavaScript es la capacidad del propio lenguaje de
+          no interrumpir el hilo de ejecución de tareas a pesar de que, algunas
           tareas pueden demorar más que otra en cumplir con sus objetivos.
         </p>
-        
+
         <p class="readme__p">
           Para este proyecto decidí consumir la api del clima de
           OpenWeatherMap.org. Al buscar una ciudad te mostrará la temperatura
-          actual, la sensación térmica, el viento y la humedad. Además, sabrás si
-          en esa ciudad es de noche o de día de acuerdo al background que se
+          actual, la sensación térmica, el viento y la humedad. Además, sabrás
+          si en esa ciudad es de noche o de día de acuerdo al background que se
           mostrará según la zona horaria vigente en dicha ciudad.
+        </p>
+
+        <p class="readme__p">
+          Si ingresas una ciudad que no existe, una alerta te indicará lo ocurrido y luego de 2 segundos desaparecerá.
+        </p>
+
+        <p class="readme__p">
+          Espero que mi proyecto te haya gustado. Lo hice con mucha dedicación y aprendí mucho. En el footer podés encontrar mis redes sociales.
+          <br/>
+          <br/>
+          <strong>Argentina Campeón 2022</strong> 
         </p>
       </div>
     </section>
+
+    <div class="wave" style="height: 150px; overflow: hidden">
+      <svg
+        viewBox="0 0 500 150"
+        preserveAspectRatio="none"
+        style="height: 100%; width: 100%"
+      >
+        <path
+          d="M0.00,49.98 C215.85,188.00 335.50,-80.41 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+          style="stroke: none; fill: #331546"
+        ></path>
+      </svg>
+    </div>
+
+    <footer class="footer">
+      <div class="footer__box">
+        <span class="footer__label"> Seguime en </span>
+        <ul class="footer__ul">
+          <li class="footer__li">
+            <a class="footer__a" href="https://www.linkedin.com/in/gonzaloramirezargentina/" target="_blank">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="27"
+                height="27"
+                fill="currentColor"
+                class="bi bi-linkedin"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="footer__li">
+            <a class="footer__a" href="https://github.com/gonzalo2022/appWeather" target="_blank">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="27"
+                height="27"
+                fill="currentColor"
+                class="bi bi-github"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>
