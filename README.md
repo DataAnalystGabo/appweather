@@ -10,4 +10,7 @@ Para este proyecto decidí consumir la API del clima de OpenWeatherMap.org. Al b
 
 Si ingresas una ciudad que no existe, una alerta te indicará lo ocurrido y luego de 2 segundos desaparecerá.
 
+![Captura de pantalla 2023-01-11 173806](https://user-images.githubusercontent.com/96387359/211912773-f773229c-e987-4222-bde2-80a857119b8a.png)
+
+
 Espero que mi proyecto te haya gustado. Lo hice con mucha dedicación y aprendí mucho. En el footer podés encontrar mis redes sociales.
