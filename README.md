@@ -6,6 +6,8 @@ El asincronismo en JavaScript es la capacidad del propio lenguaje de no interrum
 
 Para este proyecto decidí consumir la API del clima de OpenWeatherMap.org. Al buscar una ciudad te mostrará la temperatura actual, la sensación térmica, el viento y la humedad. Además, sabrás si en esa ciudad es de noche o de día de acuerdo al background que se mostrará según la zona horaria vigente en dicha ciudad.
 
+![Captura de pantalla 2023-01-11 173635](https://user-images.githubusercontent.com/96387359/211912551-94983100-a331-4b19-afe7-33a1fb4f76ff.png)
+
 Si ingresas una ciudad que no existe, una alerta te indicará lo ocurrido y luego de 2 segundos desaparecerá.
 
 Espero que mi proyecto te haya gustado. Lo hice con mucha dedicación y aprendí mucho. En el footer podés encontrar mis redes sociales.
