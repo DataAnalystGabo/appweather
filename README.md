@@ -17,3 +17,5 @@ Al buscar una ciudad te mostrará la temperatura actual, la sensación térmica,
 ![Captura de pantalla 2023-01-11 174259](https://user-images.githubusercontent.com/96387359/211913739-3f8849c9-c5a0-4e86-a05b-ce9d2497e2bd.png)
 
 Espero que mi proyecto te haya gustado. Lo hice con mucha dedicación 💜 y aprendí mucho. En el footer podrás encontrar mis redes sociales.
+
+GaboDev (Gonzalo Ramirez)
