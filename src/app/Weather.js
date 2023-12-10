@@ -1,7 +1,7 @@
 import { Ui } from "./Ui.js";
 
 export function getWeather(city) {
-    const APIKey = '8ab1f8a668d59b8309bc956ce8f471ca';
+    const APIKey =;
     const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}&units=metric&lang=es`;
 
     fetch(URL, {
